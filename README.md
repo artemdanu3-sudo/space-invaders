@@ -1,10 +1,12 @@
 # Space Invaders Console Game
 
-Space Invaders is a console-based arcade game written in pure JavaScript (Node.js).
+Space Invaders is a console-based arcade game written in pure JavaScript (Node.js). The player controls a spaceship, shoots down alien invaders, and tries to survive as long as possible.
 
 ## Features
 
-### Coordinate system
+- **Coordinate system**: Player position is stored as X coordinate, enemies and bullets are stored in arrays with `x` and `y` properties.
+
+Piece of code from `game.js` for preview:
 
 ```javascript
 let playerX = Math.floor(WIDTH / 2);
@@ -24,7 +26,9 @@ function createEnemies() {
     }
 }
 ```
-Game loop
+- Game loop with recursion: The gameLoop() function calls itself using setTimeout every 100ms, creating a smooth 10 FPS animation.
+
+Piece of code from game.js for preview:
 
 ```javascript
 function gameLoop() {
@@ -39,6 +43,10 @@ function gameLoop() {
             process.exit();
         }
 ```
+- Collision detection algorithm: Double-loop checks each bullet against each enemy. When coordinates match, enemy is destroyed and score increases by 10.
+
+Piece of code from game.js for preview:
+
 ```javascript
 Collision detection
 javascript
@@ -57,6 +65,10 @@ function checkCollisions() {
     }
 }
 ```
+- **High score persistence**: The game saves the highest score to `highscore.txt` using Node.js `fs` module, so the record is preserved between game sessions.
+
+Piece of code from `game.js` for preview:
+
 ```javascript
 High score persistence
 javascript
@@ -78,7 +90,7 @@ function saveHighScore() {
 Requirements
 
 1. Install (https://nodejs.org/)
-2. Clone repository:
+2. Clone repository: https://github.com/artemdanu3-sudo/space-invaders.git
 3. Run the game: node game.js
 ```
 ```
