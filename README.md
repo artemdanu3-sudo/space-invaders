@@ -77,13 +77,10 @@ function saveHighScore() {
 ```
 Requirements
 
-1. Install Node.js.
-
+1. Install (https://nodejs.org/)
 2. Clone repository:
-```bash
-git clone github.com/YOUR_USERNAME/space-invaders.git
-cd space-invaders
-node index.js
+3. Run the game: node game.js
+```
 ```
 Controls
 Key	Action
@@ -91,3 +88,7 @@ A / ←	Move left
 D / →	Move right
 SPACE	Shoot
 Q	Exit
+
+## Asciinema
+
+- [Gameplay recording](https://asciinema.org/a/Zq48vMqL4klmAuFN)
